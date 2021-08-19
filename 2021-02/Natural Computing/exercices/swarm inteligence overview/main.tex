@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf
+Resumo: Inteligência de Enxame
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{Hugo Amorim Martins ${Universidade Presbiteriana Mackenzie}$}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+Swarm Intelligence (SI) is a subfield of study inside Artificial Intelligence (AI) on which we study potential Artificial Intelligence algorithms inspired by collective behavior focused on the resolution of highly complex problems, and normally searching for a sub-optimal solution that can be found in a reasonable time.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introdução}
+Os problemas a serem resolvidos com Inteligência de Enxame normalmente necessitam de grande flexibilidade e versatilidade, além de muitas vezes se aproveitarem das características de adaptação a mudanças externas de tais algoritmos e não exigirem uma solução ótima global.
+
+A sub área vêm se desenvolvendo atualmente principalmente com a sua aplicação em problemas NP-Complexos, nos quais encontrar a solução ótima em um tempo razoável é uam tarefa difícil, fazendo assim com que os algoritmos inspirados em SI sejam alternativas viáveis, já que muitas vezes costumam se aproximar o suficiente do ótimo global, além de conseguirem ser executados em menos tempo.
+
+Esse resumo foi desenvolvido em cima do paper "Swarm Intelligence: A Review of Algorithms", no qual o autor faz uma revisão dos principais algoritmos inspirados em SI, classificando-os em baseados em insetos e baseados em animais, e discorrendo sobre os principais algoritmos encontrados em cada uma dessas classificações.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algoritmos Baseados em Insetos}
+
+\subsection{Colónia de Formigas}
+
+A inspiração para esse algoritmo vem do comportamento da colónia de formigas para a busca de recursos, diversas formigas procuram por recursos em locais diferentes deixando para trás uma trilha de feromônios que marcam todos os locais onde esteve e ajudam outras formigas a seguirem. Enquanto uma outra formiga verificaria todos os rastros de onde está, e pela força de cada uma das trilhas decide qual seguirá.
+
+Tal algoritmo vem sendo o mais discutido entre as aplicações de SI, e é dos algoritmias de busca mais populares na atualidade, sendo utilizado principalmente otimizações de problemas combinacional, mas também em data mining, em problemas de caixeiro viajante, roteamento de veículos, problemas de agenda, telecomunicações, entre outros.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Algoritmos Inspirados em Abelhas}
+
+O algoritmo de colónia de abelhas, se inspira no método o qual as abelhas identificam sua fonte de alimento, dividindo as abelhas em três categorias, o empregado, o observador e os batedores.
+
+Os batedores realizam a busca randômica por fontes de comida, então os empregados a marcam com um quociente fitness, quando uma fonte de comida for localizada com um maior grau de fitness, elas são marcadas para o processamento, depois é tarefa do observador identificar a melhor fonte de comida baseada na frequência que elas aparecem.
+
+Esse algoritmo normalmente é utilizado na otimização de valores numéricos, busca, alocação de tarefas e Thresholding multi-nível.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Algoritmos Inspirados em Vaga-lumes}
+
+Algoritmos inspirados em vaga-lumes normalmente se desempenham melhor em funções multi modais quando comparados com os baseados em colónia de formigas ou em abelhas. De modo similar aos dois anteriores adota inicialmente uma busca com base em população randomica.
+
+O algoritmo se baseia na bioluminescência dos vaga-lumes e sua utilização para achar presas, acasalamento e comunicação entre espécie.
+
+O quanto um vaga-lume é atrativo entre sua espécie depende da intensidade da luz, o algoritmo usa essa propriedade para inicialmente criar elementos randômica aos quais serão atribuídos valores fitness, e no fim de cada época somente os elementos com maior valor continuam.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Algoritmos Inspirados em Pirilampos}
+
+Também tendo destaque na otimização de funções multi modais, os Pirilampos são conhecidos por possuírem a capacidade de modificar a intensidade de um componente químico chamado "luciferina Firefly", o que os faz bilhar com diferentes intensidades, fator que possibilita a comunicação entre espécie.
+
+E seu algoritmo se faz com a criação de um número inicial de Pirilampos randômicos para organizarem uma colónia, cada um dos elementos representando uma possível solução para o problema, onde cada um dos membros seleciona seus vizinhos e direciona o enxame pela força de sua luciferina. E um vizinho é atraído pelo outro se o nível de sua luciferina for maior que o seu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algoritmos Baseados em Animais}
+
+\subsection{Algoritmos Baseados em Morcegos}
+
+O algoritmo dos morcegos é um dos mais recentes, sendo inspirado pelo sistema de ecolocalização dos morcegos, e como localizam suas fontes de comida. Primeiramente são criados morcegos virtuais que voam em direções aleatórias, para cada um desses morcegos é calculado uma provável distância do resultado, assim os morcegos podem ajustar sua velocidade de voo além da frequência e intensidade do seu sonar.
+
+Esse algoritmo é utilizado principalmente em problemas de domínio continuo, algumas variações do mesmo, como a eMulti-objective Bat Algorithm (MOBA), Directed Artificial Bat Algorithm (DABA) and Binary Bat Algorithms (BBA), são aplicados em diversos contextos.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Algoritmos Baseados em Macacos}
+
+Algoritmos baseados no comportamento de macacos são especialmente eficientes na resolução de problemas multi variável. Esse método é derivado das técnicas de escalar montanhas desenvolvidas pelos macacos.
+
+Considerando um número de montanhas em um espaço amostral com o objetivo de localizar o pico da maior montanha(ótimo global), inicialmente os macacos se movem para uma posição relativamente mais alta do que estavam inicialmente, repetindo o processo até achar o pico da montanha, assim que um dos macacos achar o pico de uma montanha cada um acharia um máximo local, após algumas iterações do algoritmo o maior pico encontrado é reportado como a solução do problema.
+
+Esse algoritmo reduz significante o custo de problemas de otimização altamente complexos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Algoritmos Baseados em Leões}
+
+Inicialmente são gerados leões virtuais randômicos que representam possíveis soluções, alguns integrantes da população são classificados como nômades, e o restante é denominado residentes e divididos entre sub categorias chamadas de "prides". Dentro das prides alguns integrantes são consideradas como fêmeas e o restante machos, enquanto a distribuição entre sexos é contrária nos leões nômades.
+
+Para cada leão a melhor solução encontrada é passada de iteração e progressivamente atualizada, cada uma das prides fica responsável por respostas em uma parte do espaço amostral, em cada pride alguns leões fêmeas são selecionados para caçar, e quando encontram a melhor solução histórica para aquela pride toda a pride se move para lá, sendo que em cada pride os leões machos mais novos viram nômades.
+
+Cada leão nômade se desloca randomicamente pelo espaço amostral, se um leão nômade mais forte entrar no espaço de um leão macho o nômade toma a pride, e a cada uma das gerações os leões mais fracos morrem.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Algoritmos Baseados em Lobos}
+
+Os algoritmos baseados em lobos são um dos mais novos na área. São baseados nas técnicas de caça da matilha, onde cada um dos lobos busca por uma presa individualmente e silenciosamente, e se juntam deslocando suas posições para a posição de outros membros na matilha, um caçador aleatório é escolhido em uma matilha e irá se mover a uma posição randômica permitindo o algoritmo escapar de ótimos locais.
+
+Normalmente esse algoritmo é empregado em tarefas de detecção de falhas de sistemas de energia e uma de suas variantes, a "grey wolf algorithm" tem diversas aplicações no perceptron multicamadas.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+
+\bibitem{c1} Chakraborty A., Kar A. K. (2017), "Swarm Intelligence: A Review of Algorithms".  In: Patnaik S., Yang XS., Nakamatsu K. (eds) Nature-Inspired Computing and Optimization. Modeling and Optimization in Science and Technologies, vol 10. Springer
+
+\bibitem{c2} Wikipedia, "Swarm intelligence", (August, 16, 2021)
+
+\bibitem{c3} Wikipedia, "Bat algorithm", (August, 16, 2021)
+
+\end{thebibliography}
+
+
+
+\end{document}
