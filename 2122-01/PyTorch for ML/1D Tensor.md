@@ -66,3 +66,4 @@ The dot product of two vectors is the sum of the multiplication of the correspon
 ## How torch.linspace works in pytorch?
 The linspace function creates a tensor with a sequence of numbers.
 > torch.linspace(start, end, steps)
+[1D Tensor]()
