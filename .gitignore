@@ -4,3 +4,4 @@
 *.gz
 *.fls
 .vscode
+.cache
